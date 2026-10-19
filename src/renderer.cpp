@@ -46,8 +46,8 @@ void checkCompileError(GLuint shaderID){
 void checkGlProgramLinkError(GLuint ProgramID){
     GLint success;
     
-    //Get the compilation status (GL_COMPILE_STATUS)
-    glGetProgramiv(ProgramID, GL_COMPILE_STATUS, &success);
+    //Get the linking status (GL_LINK_STATUS)
+    glGetProgramiv(ProgramID, GL_LINK_STATUS, &success);
     
     //if result is GL_FALSE, the compilation failed
     if (success == GL_FALSE) {
