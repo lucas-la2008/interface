@@ -1,7 +1,7 @@
 #include <GLFW/glfw3.h>
 #include <stdexcept>
 #include <string>
-#include "wrapper.hpp"
+#include "window.hpp"
 
 // Window implementations
 

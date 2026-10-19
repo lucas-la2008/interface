@@ -3,7 +3,7 @@
 
 #include "renderer.hpp"
 #include <GLFW/glfw3.h>
-#include "wrapper.hpp"
+#include "window.hpp"
 #include "elements/baseObject.hpp"
 #include <algorithm>
 #include <memory>
