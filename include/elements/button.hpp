@@ -8,11 +8,11 @@
 class Button : public Element<Button>{
     friend class App;
     void clicked() override;
-    std::vector<void(*)()> callbacks;
+    std::vector<void(*)(Button&)> callbacks;
     Style style;
 public:
     Button();
-    void connect(void (*func)());
+    void connect(void (*func)(Button&));
     
     Button& setColor(float,float,float,float);
 

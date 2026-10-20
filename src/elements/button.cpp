@@ -10,11 +10,11 @@ Button::Button(){
 void Button::clicked(){
     auto callbacksCopy = callbacks;
     for (auto& funcs : callbacksCopy){
-        funcs();
+        funcs(*this);
     }
 }
 
-void Button::connect(void (*func)()){
+void Button::connect(void (*func)(Button& self)){
     callbacks.push_back(func);
 }
 
