@@ -1,5 +1,6 @@
 #include "elements/button.hpp"
 #include "vectors.hpp"
+#include <functional>
 
 Button::Button(){
     size = {100.f,50.f};
@@ -14,8 +15,8 @@ void Button::clicked(){
     }
 }
 
-void Button::connect(void (*func)(Button& self)){
-    callbacks.push_back(func);
+void Button::connect(std::function<void(Button&)> func){
+    callbacks.push_back(std::move(func));
 }
 
 Button& Button::setColor(float x,float y,float z,float w){

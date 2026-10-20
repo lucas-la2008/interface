@@ -3,16 +3,17 @@
 
 #include "elements/baseObject.hpp"
 #include "style/style.hpp"
+#include <functional>
 #include <vector>
 
 class Button : public Element<Button>{
     friend class App;
     void clicked() override;
-    std::vector<void(*)(Button&)> callbacks;
+    std::vector<std::function<void(Button&)>> callbacks;
     Style style;
 public:
     Button();
-    void connect(void (*func)(Button&));
+    void connect(std::function<void(Button&)>);
     
     Button& setColor(float,float,float,float);
 
