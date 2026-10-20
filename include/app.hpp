@@ -10,10 +10,6 @@
 #include <string>
 #include <vector>
 
-enum class backgroundColors{
-    
-};
-
 template <typename T>
 concept Object = requires (T obj) {
     obj.setPosition(0.0f,0.0f);
