@@ -3,14 +3,12 @@
 
 // Setters
 BaseObject& BaseObject::setPosition(float x, float y){
-    position.x = x;
-    position.y = y;
+    position = {x,y};
     return *this;
 }
 
 BaseObject& BaseObject::setSize(float x, float y){
-    size.x = x;
-    size.y = y;
+    size = {x,y};
     return *this;
 }
 

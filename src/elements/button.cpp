@@ -30,10 +30,7 @@ Button& Button::setBorderSize(float size){
 }
 
 Button& Button::setBorderColor(float x,float y,float z,float a){
-    style.borderColor.x = x;
-    style.borderColor.y = y;
-    style.borderColor.z = z;
-    style.borderColor.a = a;
+    style.borderColor = {x,y,z,a};
     return *this;
 }
 
